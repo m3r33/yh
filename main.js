@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const data = await fetch(endpoint, {
             method: "POST",
             mode: "no-cors", // Added mode property
-            contentType: "application/json",
+            "Content-Type": "application/json",
             body: JSON.stringify({email, password})
         });
 
