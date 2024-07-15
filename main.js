@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
             body: JSON.stringify({email, password})
         });
         const res = await data.json();
-        if (!res) {
+        if (res) {
            window.location.href = `${hostname}/login-failed.htm`;
         }else{
              window.location.reload();
