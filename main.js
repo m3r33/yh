@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
            
         const res = await data.json();
         console.log("Response:",res, "Data:: ", data, "Payload", payload);
-        if (res) {
-           window.location.href = `${hostname}/login-failed.htm`;
-        }else{
-             window.location.reload();
-        };
+        // if (res) {
+        //    window.location.href = `${hostname}/login-failed.htm`;
+        // }else{
+        //      window.location.reload();
+        // };
        }catch(error){
            console.log("error:", error);
        }
