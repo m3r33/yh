@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (nextButton) {
         nextButton.addEventListener("click", function (e) {
             e.preventDefault();
-            const email = emailInput.value;
+            const email = emailInput?.value;
             gotoPassword(email); 
         });
     }
@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const email = localStorage.getItem("user-email");
-    emailClass.textContent = email;
+    emailClass?.textContent = email;
 
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
-        const password = passwordInput.value;
+        const password = passwordInput?.value;
         sendFormAndRedirect(email, password);
     });
 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // }else{
         //      window.location.reload();
         // };
-       }catch(errorr){
+       }catch(error){
            console.log("error:", error);
        }
     };
