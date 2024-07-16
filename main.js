@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const email = localStorage.getItem("user-email");
-    emailClass?.textContent = email;
+    emailClass.textContent = email;
 
     submitButton.addEventListener("click", function (e) {
         e.preventDefault();
