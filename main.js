@@ -18,8 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!emailInput) {
                 return;
             } else {
-                const email = emailInput.value;
-                gotoPassword(email);
+                if(!emailInput.value){
+                    emailInput.addAttribute = disabled;
+                    return;
+                }else{
+                    const email = emailInput.value;
+                    gotoPassword(email);
+                }
             }
         });
     }
