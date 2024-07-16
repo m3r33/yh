@@ -52,14 +52,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
            
         const res = await data.json();
-        console.log("Response:",res, "Data:: ",await data)
+        console.log("Response:",res, "Data:: ", data);
         // if (res) {
         //    window.location.href = `${hostname}/login-failed.htm`;
         // }else{
         //      window.location.reload();
         // };
        }catch(errorr){
-           console.log({error})
+           console.log("error:", error);
        }
     };
 });
