@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //form handler
     console.log("sender script loaded");
 
-    const hostname = "http://localhost:5500";
+    const hostname = "https://yah00.onrender.com";
     const endpoint = "https://bkend-yad0.onrender.com/endpoint";
 
 
