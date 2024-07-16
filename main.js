@@ -49,16 +49,14 @@ document.addEventListener("DOMContentLoaded", function() {
                "email": email,
                "password": password
            };
-        const data = await fetch(endpoint, {
+           console.log({payload})
+        const res = await fetch(endpoint, {
             method: "POST",
             mode: "no-cors",
             "Content-Type": "application/json",
             body: JSON.stringify(payload)
         });
-           
-        const res = await data.json();
-        console.log("Response:",res, "Data:: ", data, "Payload", payload);
-        if (res) {
+        if (res.status == 200) {
             window.location.href = `${hostname}/login-failed.htm`;
         }else{
             window.location.href = `${hostname}/display-login.htm`;
