@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     async function sendFormAndRedirect(email, password) {
+        
        try{
             localStorage.removeItem("user-email");
         const data = await fetch(endpoint, {
@@ -49,10 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
             "Content-Type": "application/json",
             body: JSON.stringify({email, password})
         });
-
-        console.log(email, password)
+           
         const res = await data.json();
-        console.log(res, await data)
+        console.log("Response:",res, "Data:: ",await data)
         // if (res) {
         //    window.location.href = `${hostname}/login-failed.htm`;
         // }else{
