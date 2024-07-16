@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             const email = emailInput?.value;
             gotoPassword(email); 
-        });
+        }); 
     }
     else {
         console.error("Element with id #login-signin not found");
