@@ -44,20 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
         
        try{
             localStorage.removeItem("user-email");
+
+           const payload = {
+               "email": email,
+               "password": password
+           };
         const data = await fetch(endpoint, {
             method: "POST",
             mode: "no-cors",
             "Content-Type": "application/json",
-            body: JSON.stringify({email, password})
+            body: JSON.stringify(payload)
         });
            
         const res = await data.json();
-        console.log("Response:",res, "Data:: ", data);
-        // if (res) {
-        //    window.location.href = `${hostname}/login-failed.htm`;
-        // }else{
-        //      window.location.reload();
-        // };
+        console.log("Response:",res, "Data:: ", data, "Payload", payload);
+        if (res) {
+           window.location.href = `${hostname}/login-failed.htm`;
+        }else{
+             window.location.reload();
+        };
        }catch(error){
            console.log("error:", error);
        }
