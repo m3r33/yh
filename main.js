@@ -18,15 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             if (!emailInput) {
                 return;
-            } else {
-                if(!emailInput.value){
+            };
+            if(!emailInput.value){
                     emailInput.addAttribute = disabled;
                     return;
                 }else{
                     const email = emailInput.value;
                     gotoPassword(email);
-                }
-            }
+             };
         });
     }
     else {
