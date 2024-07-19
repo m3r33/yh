@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const res = await axios.post(`${endpoint}`, payload, {
                 headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*"
+                    "Content-Type": "application/json"
                 }
             });
             if (res.status == 200) {
