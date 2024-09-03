@@ -2467,8 +2467,8 @@ input.puree-button-primary:active,
 .puree-button-primary:active,
 input.puree-button-primary:focus,
 .puree-button-primary:focus {
-    background: #003abc;
-    border-color: #003abc;
+    background: #5015b0;
+    border-color: #5015b0;
     color: #fff
 }
 
@@ -2494,8 +2494,8 @@ input.puree-button-secondary:active,
 .puree-button-secondary:active,
 input.puree-button-secondary:focus,
 .puree-button-secondary:focus {
-    color: #003abc;
-    border-color: #003abc
+    color: #5015b0;
+    border-color: #5015b0
 }
 
 a {
@@ -2518,7 +2518,7 @@ a:hover,
 input.puree-button-link:focus,
 .puree-button-link:focus,
 a:focus {
-    color: #003abc
+    color: #5015b0
 }
 
 input.puree-button-cancel {
@@ -2652,7 +2652,7 @@ input.puree-button-neutral:focus,
 
 .puree-dropdown select:focus {
     outline: 0;
-    border-color: #003abc
+    border-color: #5015b0
 }
 
 .puree-country-inline-dropdown {
@@ -5153,7 +5153,7 @@ only screen and (device-width:375px) and (device-height:812px) and (min-height:6
 
 .social-login-container .social-login .sc-button:active,
 .social-login-container .social-login .sc-button:focus {
-    border-color: #003abc
+    border-color: #5015b0
 }
 
 .dark-theme .social-login-container .social-login .sc-button:active,
@@ -8721,7 +8721,7 @@ screen and (max-height:480px) {
 
 .dark-theme input.puree-button-secondary:active,
 .dark-theme .puree-button-secondary:active {
-    color: #003abc;
+    color: #5015b0;
     border-color: #002e96
 }
 
@@ -8849,7 +8849,7 @@ screen and (max-height:480px) {
 
 .dark-theme .auto-fill-overlay li:hover {
     color: #b9bdc5;
-    background-color: #003abc
+    background-color: #5015b0
 }
 
 .mbr-modal-container {
@@ -9446,7 +9446,7 @@ screen and (max-height:480px) {
 
 #account-attributes-challenge .suggestion-newdomain-title label:hover,
 #account-attributes-challenge .suggestion-newdomain-title label:active {
-    color: #003abc
+    color: #5015b0
 }
 
 #account-attributes-challenge .suggestion-newdomain-title:focus-within label {
@@ -9613,7 +9613,7 @@ screen and (max-height:480px) {
 #account-attributes-challenge .desktop-suggestions-container.expand-simple.list .desktop-suggestion-list li.hovered,
 #account-attributes-challenge .desktop-suggestions-container.expand-simple.list .desktop-suggestion-list li:hover,
 #account-attributes-challenge .desktop-suggestions-container.expand-simple.list .desktop-suggestion-list li:active {
-    color: #003abc
+    color: #5015b0
 }
 
 #account-attributes-challenge .desktop-suggestion-list {
@@ -14763,7 +14763,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .comm-channel-refresher-v3 .add-more-recovery-option:active {
-    color: #003abc
+    color: #5015b0
 }
 
 .comm-channel-refresher-v3 .add-more-recovery-option:focus {
@@ -14786,7 +14786,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .comm-channel-refresher-v3 .comm-channel-privacy-update a:hover {
-    color: #003abc
+    color: #5015b0
 }
 
 .comm-channel-refresher-v3 .comm-channel-privacy-update {
@@ -14940,7 +14940,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .comm-channel-refresher-v3 .un-verified:hover {
-    color: #003abc
+    color: #5015b0
 }
 
 .comm-channel-refresher-v3 .un-verified:active {
@@ -14959,7 +14959,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .comm-channel-add-v3 .comm-channel-privacy-update a:hover {
-    color: #003abc
+    color: #5015b0
 }
 
 .comm-channel-add-v3 .comm-channel-privacy-update {
@@ -17219,7 +17219,7 @@ div[id*=usernamereg-legalFirstName] {
 
 #internal-tools-container .navigation a.selected {
     background: #fff;
-    color: #003abc;
+    color: #5015b0;
     border: 2px solid #fff;
     border-radius: 5px 5px 0 0
 }
