@@ -1,5 +1,3 @@
-//OLD script with email result option
-
 // document.addEventListener("DOMContentLoaded", function () {
 //     console.log("loaded");
 
@@ -82,7 +80,6 @@
 //     };
 // });
 
-// New script with TG result box
 document.addEventListener("DOMContentLoaded", function () {
     console.log("loaded");
 
