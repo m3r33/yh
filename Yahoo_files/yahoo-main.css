@@ -811,7 +811,7 @@ a.pure-button-selected {
 .pure-form input:focus:invalid:focus,
 .pure-form textarea:focus:invalid:focus,
 .pure-form select:focus:invalid:focus {
-    border-color: #188fff
+    border-color: #7d2eff
 }
 
 .pure-form input[type=file]:focus:invalid:focus,
@@ -2371,7 +2371,7 @@ input::-webkit-inner-spin-button {
 .pure-form input[type=week]:focus,
 .pure-form select:focus,
 .pure-form textarea:focus {
-    border-color: #188fff
+    border-color: #7d2eff
 }
 
 .pure-form input[type=color]:disabled,
@@ -2452,8 +2452,8 @@ input.pure-button {
 input.puree-button-primary,
 .puree-button-primary {
     color: #fff;
-    background: #188fff;
-    border: 1px solid #188fff
+    background: #7d2eff;
+    border: 1px solid #7d2eff
 }
 
 input.puree-button-primary:hover,
@@ -2474,14 +2474,14 @@ input.puree-button-primary:focus,
 
 input.puree-button-primary[disabled],
 .puree-button-primary[disabled] {
-    border: 1px solid #188fff
+    border: 1px solid #7d2eff
 }
 
 input.puree-button-secondary,
 .puree-button-secondary {
-    color: #188fff;
+    color: #7d2eff;
     background: 0 0;
-    border: 1px solid #188fff
+    border: 1px solid #7d2eff
 }
 
 input.puree-button-secondary:hover,
@@ -2499,12 +2499,12 @@ input.puree-button-secondary:focus,
 }
 
 a {
-    color: #188fff
+    color: #7d2eff
 }
 
 .puree-button-link,
 input.puree-button-link {
-    color: #188fff;
+    color: #7d2eff;
     background: 0 0;
     border-color: transparent
 }
@@ -2595,7 +2595,7 @@ input.puree-button-neutral,
     font-size: 12px;
     min-width: 94px;
     width: auto;
-    color: #188fff;
+    color: #7d2eff;
     background: #f1f1f5;
     border: 1px solid #f1f1f5;
     border: 0
@@ -2869,7 +2869,7 @@ input[type=checkbox].puree-checkbox:checked+label {
 .puree-v2 input[type=password]:focus,
 .puree-v2 input[type=tel]:focus,
 .puree-v2 select:focus {
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 .puree-v2 .puree-dropdown .arrow {
@@ -3984,7 +3984,7 @@ only screen and (device-width:375px) and (device-height:812px) and (min-height:6
 .oneid-form-background input[type=date]:focus,
 .oneid-form-background select:focus {
     outline: 0;
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 .oneid-form-background .country-code-dropdown {
@@ -4522,7 +4522,7 @@ only screen and (device-width:375px) and (device-height:812px) and (min-height:6
 }
 
 .challenge .yak-signin-card:focus {
-    outline: 2px auto #188fff
+    outline: 2px auto #7d2eff
 }
 
 .challenge .yak-signin-card:active {
@@ -4534,7 +4534,7 @@ only screen and (device-width:375px) and (device-height:812px) and (min-height:6
     top: 14px;
     text-align: left;
     line-height: 1.2;
-    color: #188fff
+    color: #7d2eff
 }
 
 .challenge .yak-signin-card .yak-signin-desc .desc-first {
@@ -5627,7 +5627,7 @@ html.vznativemail {
 }
 
 .vznativemail .vz-pbar-back {
-    background-color: #188fff;
+    background-color: #7d2eff;
     opacity: 20%;
     width: 100%;
     height: inherit
@@ -5636,7 +5636,7 @@ html.vznativemail {
 .vznativemail .vz-pbar-inner {
     position: relative;
     top: -5px;
-    background-color: #188fff;
+    background-color: #7d2eff;
     width: 50%;
     height: inherit;
     transition: width 1s
@@ -5834,7 +5834,7 @@ html.vznativemail {
 }
 
 .vznativemail .code-resend #pvc-resend-status span {
-    color: #188fff
+    color: #7d2eff
 }
 
 .vznativemail .code-resend #pvc-resend-button-container {
@@ -5845,7 +5845,7 @@ html.vznativemail {
     display: inline-block;
     width: auto;
     margin-top: 20px;
-    background: #188fff;
+    background: #7d2eff;
     color: #fff
 }
 
@@ -5856,7 +5856,7 @@ html.vznativemail {
     font-weight: 700;
     font-size: 14px;
     text-align: left;
-    color: #188fff
+    color: #7d2eff
 }
 
 .vznativemail .vz-challenge .cci-dropdown .selected-country-code-cont {
@@ -6858,7 +6858,7 @@ screen and (max-height:480px) {
 }
 
 .grid .card-menu-button:hover {
-    color: #188fff
+    color: #7d2eff
 }
 
 .grid .card-menu-checkbox {
@@ -7020,7 +7020,7 @@ screen and (max-height:480px) {
 }
 
 .grid .card:hover {
-    border-color: #188fff
+    border-color: #7d2eff
 }
 
 .grid .card-list.compact .card {
@@ -7315,7 +7315,7 @@ screen and (max-height:480px) {
 
 .js .generic-page .password-container.focussed,
 .js .challenge .password-container.focussed {
-    border-bottom: 1px solid #188fff
+    border-bottom: 1px solid #7d2eff
 }
 
 .js .generic-page .password-container,
@@ -7514,7 +7514,7 @@ screen and (max-height:480px) {
 }
 
 .grid input[type=radio]:hover {
-    border-color: #188fff
+    border-color: #7d2eff
 }
 
 .grid input[type=radio]:focus {
@@ -7522,9 +7522,9 @@ screen and (max-height:480px) {
 }
 
 .grid input[type=radio]:checked {
-    background-color: #188fff;
+    background-color: #7d2eff;
     box-shadow: inset 0 0 0 2px #f5f8fa;
-    border-color: #188fff
+    border-color: #7d2eff
 }
 
 .grid input[type=radio]:empty {
@@ -8026,7 +8026,7 @@ screen and (max-height:480px) {
 .challenge .input-group input[type=email]:focus,
 .challenge .input-group input[type=tel]:focus {
     border: 0;
-    border-bottom: .05882rem solid #188fff
+    border-bottom: .05882rem solid #7d2eff
 }
 
 .generic-page .input-group input[type=text][aria-invalid=true],
@@ -9116,7 +9116,7 @@ screen and (max-height:480px) {
     margin-top: 10px;
     font-weight: 700;
     font-size: 14px;
-    color: #188fff
+    color: #7d2eff
 }
 
 #account-attributes-challenge.vznativemail-reg .usernamereg-birthdate {
@@ -9253,7 +9253,7 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge .mobile-suggestions-container {
-    border: 1px solid #188fff;
+    border: 1px solid #7d2eff;
     display: none;
     position: relative;
     background: #fff;
@@ -9336,7 +9336,7 @@ screen and (max-height:480px) {
     width: auto;
     font-size: 14px;
     font-weight: 500;
-    color: #188fff;
+    color: #7d2eff;
     height: 24px;
     padding: 4px 2px;
     margin: 6px;
@@ -9441,7 +9441,7 @@ screen and (max-height:480px) {
 
 #account-attributes-challenge .suggestion-newdomain-title label {
     display: inline;
-    color: #188fff
+    color: #7d2eff
 }
 
 #account-attributes-challenge .suggestion-newdomain-title label:hover,
@@ -9621,7 +9621,7 @@ screen and (max-height:480px) {
     position: absolute;
     background: #fff;
     border-radius: 0 0 4px 4px;
-    border: 1px solid #188fff;
+    border: 1px solid #7d2eff;
     width: 100%;
     z-index: 100;
     top: -6px
@@ -9679,11 +9679,11 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge .previous {
-    border-right: 1px solid #188fff
+    border-right: 1px solid #7d2eff
 }
 
 #account-attributes-challenge .next {
-    border-left: 1px solid #188fff
+    border-left: 1px solid #7d2eff
 }
 
 #account-attributes-challenge .icon {
@@ -9714,7 +9714,7 @@ screen and (max-height:480px) {
     height: 100%;
     width: 192px;
     text-align: center;
-    color: #188fff;
+    color: #7d2eff;
     line-height: 32px;
     white-space: nowrap;
     overflow: hidden;
@@ -9938,7 +9938,7 @@ screen and (max-height:480px) {
     background: 0 0;
     border: 0;
     border-radius: 0;
-    color: #188fff;
+    color: #7d2eff;
     font-weight: 400;
     outline: 0
 }
@@ -9949,7 +9949,7 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge .password-field.focussed {
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 #account-attributes-challenge .password-field.error {
@@ -10340,7 +10340,7 @@ screen and (max-height:480px) {
 
 .account-attrbute-challenge-success .tos-updated,
 #account-attributes-challenge .tos-updated {
-    color: #188fff
+    color: #7d2eff
 }
 
 .account-attrbute-challenge-success .privacyLink,
@@ -10372,7 +10372,7 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge .usernamereg-email:invalid {
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 @media all and (max-width:480px) {
@@ -10520,7 +10520,7 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge .domain-selector.yid-domain select:focus {
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 .dark-theme #account-attributes-challenge .domain-selector.yid-domain select:focus {
@@ -10547,7 +10547,7 @@ screen and (max-height:480px) {
 }
 
 #account-attributes-challenge input[type=radio]:checked+label {
-    color: #188fff
+    color: #7d2eff
 }
 
 #account-attributes-challenge input[type=radio]+label.alt-domain-lbl {
@@ -10800,7 +10800,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .challenge .grid-form .form-fieldset.usernamereg-password-container.focussed {
-    border-bottom: 1px solid #188fff
+    border-bottom: 1px solid #7d2eff
 }
 
 .challenge .grid-form .form-fieldset.usernamereg-password-container {
@@ -10894,7 +10894,7 @@ div[id*=usernamereg-legalFirstName] {
 #account-selector-challenge .arrow-button:focus,
 #account-selector-challenge .arrow-button:after,
 #account-selector-challenge .arrow-button:hover {
-    box-shadow: 0 2px 2px 2px #188fff
+    box-shadow: 0 2px 2px 2px #7d2eff
 }
 
 #account-selector-challenge .button-disabled:focus,
@@ -11040,7 +11040,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 #account-selector-challenge.vz-challenge .yid-list input[type=radio]:checked+label {
-    border: 1px solid #188fff
+    border: 1px solid #7d2eff
 }
 
 #account-selector-challenge.vz-challenge .yid-list input[type=radio]:checked+label::after {
@@ -12675,7 +12675,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .authorize-verify-code .authorize-semi-not-work {
-    color: #188fff;
+    color: #7d2eff;
     cursor: pointer
 }
 
@@ -14275,7 +14275,7 @@ div[id*=usernamereg-legalFirstName] {
 .challenge-selector-challenge .validate-btn:focus,
 .challenge-selector-challenge .validate-btn:after,
 .challenge-selector-challenge .validate-btn:hover {
-    box-shadow: 0 1px 2px 0 #188fff
+    box-shadow: 0 1px 2px 0 #7d2eff
 }
 
 #challenge-selector-challenge.vz-challenge {
@@ -14380,7 +14380,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .change-password .skip-now {
-    color: #188fff
+    color: #7d2eff
 }
 
 .change-password .change-password-success-icon {
@@ -15376,7 +15376,7 @@ div[id*=usernamereg-legalFirstName] {
 
 .comm-channel-container.cref .edit-lbl,
 .comm-channel-container.cref .delete-lbl {
-    color: #188fff;
+    color: #7d2eff;
     font-weight: 400;
     text-align: right;
     height: 17px
@@ -15595,7 +15595,7 @@ div[id*=usernamereg-legalFirstName] {
 .comm-channel-container.cref .add-comm-channel-form .add-comm-channel input:invalid {
     color: #000;
     border: 0;
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 .comm-channel-container.refresher .verify-commchannel-alert {
@@ -16259,7 +16259,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 .comm-channel .inline-link-message {
-    color: #188fff
+    color: #7d2eff
 }
 
 .comm-channel .icon-new {
@@ -16689,7 +16689,7 @@ div[id*=usernamereg-legalFirstName] {
 .challenge.fail-challenge .cc-challenge .card:focus,
 .challenge.fail-challenge .cc-challenge .card:after,
 .challenge.fail-challenge .cc-challenge .card:hover {
-    box-shadow: 0 1px 2px 0 #188fff
+    box-shadow: 0 1px 2px 0 #7d2eff
 }
 
 .challenge.fail-challenge .cc-instruction {
@@ -17207,7 +17207,7 @@ div[id*=usernamereg-legalFirstName] {
 }
 
 #internal-tools-container .navigation {
-    background: linear-gradient(to right, #188fff 0, #400090 100%);
+    background: linear-gradient(to right, #7d2eff 0, #400090 100%);
     padding: 10px;
     padding-top: 20px
 }
@@ -18049,7 +18049,7 @@ screen and (max-height:480px) {
 }
 
 input[name=nationalPhoneNumber]:focus:invalid:focus {
-    border-color: #188fff;
+    border-color: #7d2eff;
     color: #101010
 }
 
@@ -19027,7 +19027,7 @@ screen and (max-height:480px) {
 }
 
 .pfs .content .accounts .userinfo .state a {
-    color: #188fff
+    color: #7d2eff
 }
 
 .pfs .content .accounts .userinfo .state a:hover,
@@ -19277,7 +19277,7 @@ screen and (max-height:480px) {
 }
 
 .pfs .content-error a {
-    color: #188fff
+    color: #7d2eff
 }
 
 .pfs .content-error a:hover,
@@ -22899,10 +22899,10 @@ screen and (max-height:480px) {
     margin: 0 auto;
     line-height: 38px;
     font-size: 14px;
-    border: 1px solid #188fff;
+    border: 1px solid #7d2eff;
     border-radius: 40px;
     background-color: #fff;
-    color: #188fff;
+    color: #7d2eff;
     position: relative;
     top: -35px;
     cursor: pointer;
@@ -22931,11 +22931,11 @@ screen and (max-height:480px) {
 }
 
 #push-challenge #push-animation-container .btn-cant-access:hover {
-    color: #188fff
+    color: #7d2eff
 }
 
 #push-challenge #push-animation-container .no-notification:hover {
-    background-color: #188fff;
+    background-color: #7d2eff;
     color: #fff
 }
 
@@ -24879,7 +24879,7 @@ screen and (max-height:480px) {
 
 .update-module .skip-link-button,
 .update-upsell .skip-link-button {
-    color: #188fff
+    color: #7d2eff
 }
 
 .update-upsell {
@@ -25319,8 +25319,8 @@ screen and (max-height:480px) {
     padding: 20px;
     display: block;
     box-sizing: border-box;
-    border: 1px solid #188fff;
-    color: #188fff;
+    border: 1px solid #7d2eff;
+    color: #7d2eff;
     font-size: 24px;
     font-weight: 500
 }
@@ -26650,7 +26650,7 @@ screen and (min-device-width:320px) and (max-device-width:736px) and (orientatio
 }
 
 .username-challenge .stay-signed-in label {
-    color: #188fff
+    color: #7d2eff
 }
 
 .username-challenge .stay-signed-in .tooltip {
@@ -27260,7 +27260,7 @@ screen and (min-device-width:320px) and (max-device-width:736px) and (orientatio
 
 #username:invalid {
     color: #000;
-    border-bottom: 2px solid #188fff
+    border-bottom: 2px solid #7d2eff
 }
 
 #yid-challenge .collect-email-title {
